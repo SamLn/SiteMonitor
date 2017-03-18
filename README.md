@@ -1,2 +1,2 @@
 # SiteMonitor
-A tool to monitor a website for changes
+A tool to monitor a website for changes using python and the BeautifulSoup library
