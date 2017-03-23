@@ -10,7 +10,13 @@ def main():
 
 	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 	response = requests.get(url, headers=headers)
+	response.cookies['example_cookie_name]
 	soup = BeautifulSoup(response.text, "lxml")
+			 
+	url = "http://rschlicting.weebly.com/hl-physics-3-4.html"
+	cookies = dict(cookies_are='working')
+	response = requests.get(url, cookies=cookies)
+	response.text
 
 	while True:
 		time.sleep(updateDelay)
