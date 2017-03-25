@@ -6,8 +6,7 @@ import difflib
 def main():
 	#url = "http://"+str(input("URI to monitor: "))
 	url = "http://rschlichting.weebly.com/hl-physics-3-4.html"
-	updateDelay = int(input("Time to wait before each update:"))
-
+	
 	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 	response = requests.get(url, headers=headers)
 	soup = BeautifulSoup(response.text, "lxml")
@@ -24,3 +23,16 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+#global_variables
+updateDelay = input("Time to wait before each update:")
+	
+def get_time():
+	if type(updateDelay) == str:
+		updateDelay == 2
+		print("not valid input, default of 2 seconds used")
+		
+	else:
+		return(updateDelay)
+		print("will check every "+updateDelay+" seconds")
+
